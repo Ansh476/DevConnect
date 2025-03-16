@@ -16,4 +16,7 @@ explore other developers, and engage in real-time conversations. 🤝
 
 🚀 Tech Stack
 
-Frontend: React.js, Tailwind CSS ⚡Backend: Node.js, Express.js 🛠️Database: MongoDB 🗄️Real-Time Chat: Socket.io 🔥
+Frontend: React.js, Tailwind CSS ⚡
+Backend: Node.js, Express.js 🛠️
+Database: MongoDB 🗄️
+Real-Time Chat: Socket.io 🔥
