@@ -92,7 +92,7 @@ const Chat = () => {
         <div className="flex flex-col h-screen">
             {/* Chat window */}
             <div className="flex-grow flex flex-col p-4">
-                <div className="chat-window border border-black rounded-lg h-[70vh] w-[65%] mx-auto flex flex-col overflow-hidden">
+                <div className="chat-window bg-white border border-black rounded-lg h-[70vh] w-[65%] mx-auto flex flex-col overflow-hidden">
                     <div className="chat-messages flex-1 overflow-y-auto p-4">
                         {user && messages.map((message, index) => (
                             <div key={index} className={`chat ${user.firstName === message.firstName ? "chat-end" : "chat-start"} mb-4`}>

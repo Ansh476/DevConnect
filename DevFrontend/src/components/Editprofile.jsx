@@ -102,7 +102,7 @@ return (
                 </div>
             </div>
         </div>
-        <UserCard user={{firstName,lastName,age,gender,skills,photourl}}/>
+        <UserCard user={{firstName,lastName,age,gender,skills,photourl}}showActions={false}/>
     </div>
 
 )

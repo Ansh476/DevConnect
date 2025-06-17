@@ -28,10 +28,10 @@ const Body = () => {
     fetchUser()
   },[]);
   return (
-    <div>
-        <Navbar/>
-        <Outlet/>
-        <Footer/>
+    <div className="min-h-screen bg-gradient-to-r from-primary via-secondary to-tertiary">
+      <Navbar />
+        <Outlet />
+      <Footer />
     </div>
   )
 }

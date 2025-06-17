@@ -28,11 +28,10 @@ const Connections = () => {
 
   return (
     <div className='text-center my-10'>
-      <h1 className='text-4xl font-bold'>Connections</h1>
+      <h1 className='text-4xl font-bold text-white'>Connections</h1>
       {connections.map((conn, index) => {
         const { _id, firstName, lastName, photourl, age, gender } = conn;
 
-        // Provide default values or handle missing properties
         const name = `${firstName || ''} ${lastName || ''}`.trim();
         const ageGender = age && gender ? `${age}, ${gender}` : '';
 

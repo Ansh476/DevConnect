@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { removefeed } from '../utils/feedSlice';
 import { BASE_URL } from '../utils/constants'
 
-const UserCard = ({ user}) => {
+const UserCard = ({ user,showActions = true}) => {
   
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ const UserCard = ({ user}) => {
   const { _id,firstName, lastName, age, photourl, gender, skills } = user;
 
   return (
-    <div className="card card-compact bg-base-100 w-96 shadow-xl overflow-hidden">
+    <div className="card card-compact bg-base-100 w-96 shadow-xl overflow-hidden bg-gray-100">
       {/* Remove gaps between the image and card */}
       <figure className="m-0">
         <img
@@ -38,10 +38,10 @@ const UserCard = ({ user}) => {
         {skills && (
           <p className="text-lg">{'Skills: ' + skills.join(', ')}</p>
         )}
-        <div className="card-actions flex justify-center my-4">
+        {showActions && (<div className="card-actions flex justify-center my-4">
           <button className="btn bg-pink-700 text-lg" onClick={()=>handlesendreq("ignored",_id)}>Ignore</button>
           <button className="btn bg-blue-700 text-lg" onClick={()=>handlesendreq("interested",_id)}>Interested</button>
-        </div>
+        </div>)}
       </div>
     </div>
   );
