@@ -12,7 +12,7 @@ It’s a clean, intent-driven way to discover fellow developers without the clut
 
 ✅ Developer Profiles – Showcase your skills, projects, and experiences.
 ✅ Connect with Others – Discover and network with like-minded developers.
-✅ Real-Time Chat – Chat instantly with other developers and collaborate on projects. 💬
+✅ Real-Time Chat – Chat instantly with other developers and collaborate on projects.
 ✅ Google Authentication -  One-click signup and login via your Google account.
 
 🚀 Tech Stack
