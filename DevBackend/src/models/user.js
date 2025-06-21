@@ -5,16 +5,16 @@ const jwt = require('jsonwebtoken');
 
 const UserSchema = new mongoose.Schema({
     firstName:{
-        type: 'string',
+        type: String,
         required: true,
         maxlength:50
     },
     lastName:{
-        type: 'string',
+        type: String,
         required: true
     },
     emailId:{
-        type: 'string',
+        type: String,
         required: true, //schema validations
         lowercase: true,
         unique: true,
@@ -27,8 +27,8 @@ const UserSchema = new mongoose.Schema({
         }
     },
     password:{
-        type: 'string',
-        required: true,
+        type: String,
+        required: false,
         validate(value){
             if(!validator.isStrongPassword(value)){
                 throw new Error("enter strong password")
@@ -36,7 +36,7 @@ const UserSchema = new mongoose.Schema({
         }
     },
     gender:{
-        type: 'string',
+        type: String,
         validate(value){
             if(!["male", "female","others"].includes(value)){
                 throw new Error("Gender not valid")
@@ -44,7 +44,7 @@ const UserSchema = new mongoose.Schema({
         }
     },
     age:{
-        type: 'Number',
+        type:Number,
         min:18,
     },
     // about:{
@@ -64,12 +64,16 @@ const UserSchema = new mongoose.Schema({
         }
     },
     phone:{
-        type: 'string',
+        type: String,
         validate(value){
             if(!validator.isMobilePhone(value)){
                 throw new Error("phone number not valid")
             }
         }
+    },
+    googleId: { 
+    type: String,
+    required: false,
     },
     otp: {
         type: String,

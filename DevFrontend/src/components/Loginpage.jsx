@@ -259,6 +259,12 @@ const LoginPage = () => {
           >
             {isLoginform ? "Don't have an account? Register here" : "Existing user? Sign-in"}
           </p>
+          <div className="divider">OR</div>
+            <a href="http://localhost:7777/google">
+              <button className="btn bg-blue-500 text-white btn-outline btn-accent w-full mb-4">
+                Continue with Google
+              </button>
+            </a>
         </div>
       </div>
 

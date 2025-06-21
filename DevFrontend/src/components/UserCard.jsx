@@ -36,7 +36,9 @@ const UserCard = ({ user,showActions = true}) => {
           <p className="text-lg">{'Age: ' + age + ', ' + 'Gender: ' + gender}</p>
         )}
         {skills && (
-          <p className="text-lg">{'Skills: ' + skills.join(', ')}</p>
+          <p className="text-lg">
+            {'Skills: ' + (Array.isArray(skills) ? skills.join(', ') : skills)}
+          </p>
         )}
         {showActions && (<div className="card-actions flex justify-center my-4">
           <button className="btn bg-pink-700 text-lg" onClick={()=>handlesendreq("ignored",_id)}>Ignore</button>

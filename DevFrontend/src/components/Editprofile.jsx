@@ -27,19 +27,34 @@ const Editprofile = ({user}) => {
 
     const dispatch = useDispatch();
 
-    const saveprofile = async() => {
-        setError("");
-        try{
-            const res = await axios.post(BASE_URL+"/profile/edit",{firstName,lastName,age,gender,skills,photourl},{withCredentials:true})
-            // console.log(res);
-            dispatch(addUser(res?.data?.data))
-        }
-        catch(err) {
-            setError(err.message);
-        }
+const saveprofile = async () => {
+  setError("");
+  try {
+    const res = await axios.post(BASE_URL + "/profile/edit", {
+      firstName,
+      lastName,
+      age,
+      gender,
+      skills,
+      photourl
+    }, { withCredentials: true });
+
+    const updatedUser = res?.data?.data;
+    const msg = res?.data?.message;
+
+    if (updatedUser) {
+      dispatch(addUser(updatedUser)); // updates Redux store
+      alert(msg || "Profile updated successfully.");
+    } else {
+      alert("Profile update failed. Please try again.");
     }
 
-    
+  } catch (err) {
+    console.error("Frontend Error >>>", err.response?.data || err.message);
+    setError(err.response?.data?.error || "Something went wrong.");
+    alert(err.response?.data?.error || "Something went wrong.");
+  }
+}
 
 return (
     <div className='flex flex-col lg:flex-row justify-center items-center my-10'>

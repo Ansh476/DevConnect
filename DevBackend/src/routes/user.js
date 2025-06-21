@@ -6,6 +6,24 @@ const User = require('../models/user');
 
 const USER_SAFE_DATA = "firstName lastName age gender skills"
 
+userRouter.get("/user/me", userAuth, async (req, res) => {
+  try {
+    const user = req.user;
+    res.json({
+      _id: user._id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      emailId: user.emailId,
+      photourl: user.photourl,
+      age: user.age,
+      gender: user.gender,
+      skills: user.skills,
+      phone: user.phone,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to get user info" });
+  }
+});
 userRouter.get('/user/requests/received',userAuth,async (req, res) =>{
     try{
         const loggedinuser = req.user;
@@ -99,6 +117,7 @@ userRouter.get('/user/feed',userAuth,async (req,res)=>{
         res.status(404).send("error: "+ err.message)
     }
 })
+
 
 
 module.exports = userRouter

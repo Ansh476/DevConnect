@@ -6,6 +6,8 @@ const cookieparser = require('cookie-parser');
 const cors = require('cors');
 require('dotenv').config(); 
 const http = require('http');
+const passport = require('passport');
+require('./config/passport');
 
 const port = process.env.PORT;
 
@@ -16,6 +18,7 @@ const requestRouter = require('./routes/request');
 const userRouter = require('./routes/user');
 const initializesocket = require('./utils/socket');
 const chatRouter = require('./routes/chat');
+const googleRouter = require('./routes/googleAuth');
 
 app.use(cors({
    origin: "http://localhost:5173", // Your frontend origin
@@ -30,6 +33,8 @@ app.use(express.json());
 app.use(cookieparser());
 
 app.use("/",authRouter);
+app.use(passport.initialize());
+app.use("/", googleRouter);
 app.use("/",profileRouter);
 app.use("/",requestRouter);
 app.use("/",userRouter);

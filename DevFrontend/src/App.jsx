@@ -8,6 +8,7 @@ import Feed from './components/Feed'
 import Connections from './components/Connections'
 import Requests from './components/Requests'
 import Chat from './components/Chat'
+import OAuthSuccess from "./components/OAuthSuccess";
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/requests' element={<Requests/>}/>
             <Route path='/profile' element={<Profile/>}/>
             <Route path='/chat/:targetuserId' element={<Chat/>}/>
+            <Route path="/oauth-success" element={<OAuthSuccess />} />
           </Route>
         </Routes>
       </BrowserRouter>
