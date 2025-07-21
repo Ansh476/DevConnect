@@ -4,15 +4,16 @@ Welcome to DevConnect – a powerful and exciting platform where developers conn
 
 🌟 About DevConnect
 
-DevConnect is not just another networking platform; it’s a community-driven space designed for developers, by developers. 
-Whether you are a newbie or an experienced coder, DevConnect provides a space where you can showcase your profile, 
-explore other developers, and engage in real-time conversations. 🤝
+DevConnect isn’t just another developer networking platform ,it cuts out the noise and brings you a focused feed, one profile at a time.
+You decide to connect or move on, and once skipped, that profile’s gone for good. 
+It’s a clean, intent-driven way to discover fellow developers without the clutter.. 🤝
 
 🔥 Key Features
 
 ✅ Developer Profiles – Showcase your skills, projects, and experiences.
 ✅ Connect with Others – Discover and network with like-minded developers.
-✅ Real-Time Chat – Chat instantly with other developers and collaborate on projects. 💬
+✅ Real-Time Chat – Chat instantly with other developers and collaborate on projects.
+✅ Google Authentication -  One-click signup and login via your Google account.
 
 🚀 Tech Stack
 
